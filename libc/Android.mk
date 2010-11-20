@@ -658,6 +658,10 @@ libc_crt_target_cflags += \
     -I$(LOCAL_PATH)/include  \
     -DPLATFORM_SDK_VERSION=$(PLATFORM_SDK_VERSION)
 
+ifeq ($(BOARD_USE_NASTY_PTHREAD_CREATE_HACK),true)
+  libc_common_cflags += -DNASTY_PTHREAD_CREATE_HACK
+endif
+
 # Define some common includes
 # ========================================================
 libc_common_c_includes := \
