@@ -152,9 +152,9 @@
 /* define __ARM_HAVE_LDREX_STREX for ARMv6 and ARMv7 architecture to be
  * used in replacement of deprecated swp instruction
  */
-//#if __ARM_ARCH__ >= 6
-//#  define __ARM_HAVE_LDREX_STREX
-//#endif
+#if __ARM_ARCH__ >= 6
+#  define __ARM_HAVE_LDREX_STREX
+#endif
 
 /* define __ARM_HAVE_DMB for ARMv7 architecture
  */
